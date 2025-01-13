@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王梓珺wiki</title>
+  <link rel="icon" href="ico.ico" type="image/x-icon"> <!-- icon -->
+  <style>
+    /* 全局样式 */
+    body {
+      font-family: '微软雅黑', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('bg.jpg'); /* bg */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      /* 亚克力效果 */
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* 让 body 元素至少充满视口高度 */
+      position: relative; /* 使子元素可以相对于 body 定位 */
+    }
+
+    /* 加载动画容器的样式 */
+ .loading-container {
+      border: 8px solid #f3f3f3; /* 加载动画的边框 */
+      border-top: 8px solid #3498db; /* 加载动画的顶部边框，形成旋转效果 */
+      border-radius: 50%; /* 圆形 */
+      width: 60px; /* 加载动画的宽度 */
+      height: 60px; /* 加载动画的高度 */
+      animation: spin 1s linear infinite; /* 旋转动画，持续时间 1s，线性，无限循环 */
+      position: absolute; /* 绝对定位 */
+      top: 50%; /* 距离顶部 50% */
+      left: 50%; /* 距离左侧 50% */
+      margin-top: -30px; /* 向上偏移自身高度的一半 */
+      margin-left: -30px; /* 向左偏移自身宽度的一半 */
+    }
+
+    /* 定义转圈动画 */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg); /* 开始时旋转 0 度 */
+      }
+      100% {
+        transform: rotate(360deg); /* 结束时旋转 360 度 */
+      }
+    }
+
+    /* 导航栏样式 */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0);
+      padding: 10px;
+    }
+
+    nav button {
+      font-family: '微软雅黑', sans-serif;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      animation: bounce 1s ease infinite alternate; /* 为按钮添加跳动动画 */
+    }
+
+    /* 按钮跳动动画 */
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* 文本加载动画 */
+ .text-container h1,
+.text-container p {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 版权信息样式 */
+    footer {
+      margin-top: auto; /* 将版权信息推到最底部 */
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+      animation: fadeIn 2s forwards; /* 为版权信息添加淡入动画 */
+      animation-delay: 3s; /* 延迟 2 秒开始动画 */
+    }
+
+    /* 标题文字特效 */
+ .text-container h1 {
+      animation: scaleUp 2s forwards;
+      animation-delay: 1s;
+    }
+
+    /* 标题文字的缩放动画 */
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* 段落文字特效 */
+ .text-container p {
+      animation: slideIn 2s forwards;
+      animation-delay: 1.5s;
+    }
+
+    /* 段落文字的滑动动画 */
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loading-container"></div>
+  <nav>
+    <button id="jumpButton" onclick="window.location.href='another-page.html'">跳转</button>
+  </nav>
+  <div class="text-container" style="text-align: center; margin-top: 200px;">
+    <h1>欢迎来到王梓珺wiki</h1>
+    <p>王梓珺wiki原成立于2023年</p>
+    <p>但后期死亡于2024/1/15 位于2025/1/12正式复活</p>
+    <p>王梓珺wiki目前基本属于全部复活状态，此wiki包含部分人光荣事迹，以及及其小部分人的网络黑历史（仅供参考，均为网络结果）</p>
+    <p>王梓珺wiki欢迎各位人士投稿</p>
+  </div>
+  <footer>
+    © 2025 [王梓珺wiki]. All rights reserved.
+  </footer>
+  <script>
+    window.onload = function () {
+      // 页面加载完成后隐藏加载动画，可以使用 CSS 来隐藏，这里简单地移除元素
+      const loadingContainer = document.querySelector('.loading-container');
+      loadingContainer.remove();
+    };
+  </script>
+</body>
+
+</html>
